@@ -1,0 +1,58 @@
+package one.digitalinnovation.queue;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Final_Exercise {
+
+    public static void main(String[] args){
+
+        Queue<String> LongLine = new LinkedList<String>();
+
+            LongLine.add("Juliana");
+            LongLine.add("Pedro");
+            LongLine.add("Carlos");
+            LongLine.add("Larissa");
+            LongLine.add("Joao");
+
+            System.out.println(LongLine);
+
+            for (String customer: LongLine) {
+                System.out.println(customer);
+            }
+
+            Iterator<String> iteratorLongLine = LongLine.iterator();
+
+            while (iteratorLongLine.hasNext()) {
+                System.out.println("--->" + iteratorLongLine.next());
+            }
+
+            String First_in_line = LongLine.peek();
+
+            System.out.println(First_in_line);
+
+            System.out.println(LongLine);
+
+            String Next_in_line = LongLine.poll();
+
+            System.out.println(Next_in_line);
+
+            System.out.println(LongLine);
+
+            LongLine.add("Daniel");
+
+            System.out.println(LongLine);
+
+            System.out.println(LongLine.size());
+
+            boolean Empty_List = LongLine.isEmpty();
+
+            System.out.println(Empty_List);
+
+            boolean LookingCarlos = LongLine.contains("Carlos");
+
+            System.out.println(LookingCarlos);
+
+    }
+}

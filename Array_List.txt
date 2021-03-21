@@ -1,0 +1,59 @@
+package one.digitalinnovation.list;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class ExercicioFinal {
+
+    public static void main(String[] args) {
+
+        List<String> names = new ArrayList<>();
+            names.add("Juliana");
+            names.add("Pedro");
+            names.add("Carlos");
+            names.add("Larissa");
+            names.add("Joao");
+
+            System.out.println(names);
+
+            names.set(2, "Roberto");
+
+            System.out.println(names);
+
+            System.out.println(names.get(1));
+
+            names.remove(4);
+
+            System.out.println(names);
+
+            names.remove("Joao");
+
+            System.out.println(names);
+
+            int size = names.size();
+
+            System.out.println(size);
+
+            boolean temJuliana = names.contains("Juliana");
+
+            System.out.println(temJuliana);
+
+            List<String> names2 = new ArrayList<>();
+                names2.add("Ismael");
+                names2.add("Rodrigo");
+
+                System.out.println(names2);
+
+                names.addAll(names2);
+
+                System.out.println(names);
+
+                Collections.sort(names);
+
+                System.out.println(names);
+
+    }
+}
+
+

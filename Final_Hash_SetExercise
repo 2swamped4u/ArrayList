@@ -1,0 +1,72 @@
+package one.digitalinnovation.map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Final_Exercise_HashMap {
+
+    public static void main(String[] args) {
+
+        Map<String, String> Brazil_states = new HashMap<>();
+
+        Brazil_states.put("GO", "Goais");
+        Brazil_states.put("AC", "Acre");
+        Brazil_states.put("AL", "Algoas");
+        Brazil_states.put("AP", "Amapa");
+        Brazil_states.put("AM", "Amazonas");
+        Brazil_states.put("BA", "Bahia");
+        Brazil_states.put("CE", "Ceara");
+        Brazil_states.put("ES", "Vitoria");
+        Brazil_states.put("MA", "Maranhao");
+        Brazil_states.put("MT", "Mato Grosso");
+        Brazil_states.put("MS", "Mato Grosso do Sul");
+        Brazil_states.put("MG", "Minas Gerais");
+        Brazil_states.put("PA", "Para");
+        Brazil_states.put("PB", "Paraiba");
+        Brazil_states.put("PR", "Parana");
+        Brazil_states.put("PE", "Pernambuco");
+        Brazil_states.put("PI", "Piaui");
+        Brazil_states.put("RJ", "Rio de Janeiro");
+        Brazil_states.put("RN", "Rio Grande do Norte");
+        Brazil_states.put("RS", "Rio Grande do Sul");
+        Brazil_states.put("RO", "Rondonia");
+        Brazil_states.put("RR", "Roraima");
+        Brazil_states.put("SC", "Santa Catarina");
+        Brazil_states.put("SP", "Sao Paulo");
+        Brazil_states.put("SE", "Sergipe");
+        Brazil_states.put("TO", "Tocantis");
+
+        System.out.println(Brazil_states);
+
+        Brazil_states.remove("MG", "Minas Gerais");
+
+        System.out.println(Brazil_states);
+
+        Brazil_states.put("DF", "Distrito Federal");
+
+        System.out.println(Brazil_states);
+
+        System.out.println(Brazil_states.size());
+
+        Brazil_states.remove("MS");
+
+        System.out.println(Brazil_states);
+
+        for (String key : Brazil_states.keySet()) {
+            System.out.println(Brazil_states.get(key) + "(" + key + ")");
+        }
+
+        System.out.println(Brazil_states);
+
+        for (Map.Entry<String, String> entry : Brazil_states.entrySet()) {
+            System.out.println(entry.getValue() + "(" + entry.getKey() + ")");
+        }
+
+        System.out.println(Brazil_states);
+
+        System.out.println(Brazil_states.containsKey("SC"));
+
+        System.out.println(Brazil_states.containsKey("MA"));
+
+    }
+}

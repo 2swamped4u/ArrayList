@@ -1,0 +1,42 @@
+package one.digitalinnovation.set;
+
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
+public class Final_Exercise_Sets {
+
+    public static void main(String[] args){
+
+        LinkedHashSet<Integer> Numerical_sequence = new LinkedHashSet<>();
+
+        Numerical_sequence.add(3);
+        Numerical_sequence.add(88);
+        Numerical_sequence.add(20);
+        Numerical_sequence.add(4);
+        Numerical_sequence.add(33);
+
+        System.out.println(Numerical_sequence);
+
+        Iterator<Integer> iterator = Numerical_sequence.iterator();
+
+        for (Integer number: Numerical_sequence) {
+            System.out.println(number);
+        }
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        Numerical_sequence.remove(3);
+
+        System.out.println(Numerical_sequence);
+
+        Numerical_sequence.add(23);
+
+        System.out.println(Numerical_sequence);
+
+        System.out.println(Numerical_sequence.size());
+
+        System.out.println(Numerical_sequence.isEmpty());
+    }
+}

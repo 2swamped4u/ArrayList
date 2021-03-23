@@ -1,0 +1,29 @@
+package one.digitalinnovation.optionals;
+
+import java.util.Optional;
+import java.util.OptionalInt;
+import java.util.OptionalLong;
+
+public class Final_Exercise_Optionals {
+
+    public static void main(String[] args){
+
+        Optional<String> undecided_court_date = Optional.empty();
+
+        System.out.println("No change happening in court");
+        undecided_court_date.ifPresentOrElse(System.out::println, () -> System.out.println("Check in!"));
+
+        Optional<String> court_date = Optional.of("Present Status");
+        OptionalInt.of(4282021).ifPresent(System.out::println);
+
+        System.out.println("Optional Status of Presence");
+        court_date.ifPresentOrElse(System.out::println, () -> System.out.println("Not Present!"));
+
+        Optional<String> reset_court_date = Optional.of(null);
+        OptionalLong.of(5282021L).ifPresent(System.out::println);
+
+        System.out.println("Status for CourtDateResetException");
+        reset_court_date.ifPresentOrElse(System.out::println, () -> System.out.println("Error = Reset court date"));
+
+    }
+}

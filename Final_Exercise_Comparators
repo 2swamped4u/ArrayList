@@ -1,0 +1,73 @@
+package one.digitalinnovation.comparators;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Final_Exercise_Comparators {
+    public static void main(String[] args){
+
+        List<NFL_Teams> nfl_teams = new ArrayList<>();
+
+        nfl_teams.add(new NFL_Teams("New England Patriots", 6));
+        nfl_teams.add(new NFL_Teams("Pittsburgh Steelers", 6));
+        nfl_teams.add(new NFL_Teams("Dallas Cowboys", 5));
+        nfl_teams.add(new NFL_Teams("Denver Broncos", 3));
+        nfl_teams.add(new NFL_Teams("San Francisco 49ers", 5));
+        nfl_teams.add(new NFL_Teams("Green Bay Packers", 4));
+        nfl_teams.add(new NFL_Teams("New York Giants", 4));
+        nfl_teams.add(new NFL_Teams("Washington Redskins", 3));
+        nfl_teams.add(new NFL_Teams("Oakland Raiders", 3));
+        nfl_teams.add(new NFL_Teams("Miami Dolphins", 2));
+
+        System.out.println("---Inserted Order---");
+        System.out.println(nfl_teams);
+
+        nfl_teams.sort((first, second) -> first.getSuper_bowls() - second.getSuper_bowls());
+        System.out.println("---Super Bowl Ascending Chart---");
+        System.out.println(nfl_teams);
+
+        nfl_teams.sort((first, second) -> second.getSuper_bowls() - first.getSuper_bowls());
+        System.out.println("---Super Bowl Descending Chart---");
+        System.out.println(nfl_teams);
+
+        nfl_teams.sort(Comparator.comparingInt(NFL_Teams::getSuper_bowls));
+
+        System.out.println("---Natural Order of NFL Teams - Super Bowls (method reference)---");
+        System.out.println(nfl_teams);
+
+        nfl_teams.sort(Comparator.comparingInt(NFL_Teams::getSuper_bowls).reversed());
+
+        System.out.println("---Reversed Order of NFL Teams - Super Bowls (interface Comparable)---");
+        System.out.println(nfl_teams);
+
+        Collections.sort(nfl_teams);
+
+        System.out.println("---Natural Order of NFL Teams - Super Bowls (interface Comparable)---");
+        System.out.println(nfl_teams);
+
+        Collections.sort(nfl_teams, new Super_Bowls_Comparator());
+
+        System.out.println("---Reverse Order of NFL Teams - Super Bowls (interface Comparator)---");
+        System.out.println(nfl_teams);
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

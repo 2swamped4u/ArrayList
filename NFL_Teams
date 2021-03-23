@@ -1,0 +1,29 @@
+package one.digitalinnovation.comparators;
+
+public class NFL_Teams implements Comparable<NFL_Teams>{
+
+    private final String name;
+    private final Integer super_bowls;
+
+    public NFL_Teams(String name, Integer super_bowls) {
+        this.name = name;
+        this.super_bowls = super_bowls;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public Integer getSuper_bowls(){
+        return super_bowls;
+    }
+
+    @Override
+    public String toString(){
+        return name + "--" + super_bowls;}
+
+    @Override
+    public int compareTo(NFL_Teams o){
+        return this.getSuper_bowls() - o.getSuper_bowls();
+    }
+}

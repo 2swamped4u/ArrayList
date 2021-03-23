@@ -1,0 +1,11 @@
+package one.digitalinnovation.comparators;
+
+import java.util.Comparator;
+
+public class Super_Bowls_Comparator implements Comparator<NFL_Teams> {
+
+    @Override
+    public int compare(NFL_Teams o1, NFL_Teams o2){
+        return o2.getSuper_bowls() - o1.getSuper_bowls();
+    }
+}
